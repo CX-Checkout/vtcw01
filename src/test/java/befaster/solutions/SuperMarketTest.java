@@ -74,7 +74,7 @@ public class SuperMarketTest {
     @Test
     public void productNotAvailable() throws Exception {
         final SuperMarket superMarket = new SuperMarket();
-        assertThat(superMarket.checkout("ABYACAB"), equalTo(-1));
+        assertThat(superMarket.checkout("ABlYACAB"), equalTo(-1));
     }
 
     @Test
@@ -84,9 +84,51 @@ public class SuperMarketTest {
     }
 
     @Test
+    public void specialOffer3N1M() throws Exception {
+        final SuperMarket superMarket = new SuperMarket();
+        assertThat(superMarket.checkout("NNNM"), equalTo(120));
+    }
+
+    @Test
+    public void specialOffer4N1M() throws Exception {
+        final SuperMarket superMarket = new SuperMarket();
+        assertThat(superMarket.checkout("NNNNM"), equalTo(160));
+    }
+
+    @Test
+    public void specialOffer6N1M() throws Exception {
+        final SuperMarket superMarket = new SuperMarket();
+        assertThat(superMarket.checkout("NNNNNNM"), equalTo(240));
+    }
+
+    @Test
+    public void specialOfferR() throws Exception {
+        final SuperMarket superMarket = new SuperMarket();
+        assertThat(superMarket.checkout("RRRQ"), equalTo(150));
+    }
+
+    @Test
+    public void specialOfferU() throws Exception {
+        final SuperMarket superMarket = new SuperMarket();
+        assertThat(superMarket.checkout("UUUU"), equalTo(120));
+    }
+
+    @Test
     public void specialOffer5A() throws Exception {
         final SuperMarket superMarket = new SuperMarket();
         assertThat(superMarket.checkout("AAAAA"), equalTo(200));
+    }
+
+    @Test
+    public void specialOffer5H() throws Exception {
+        final SuperMarket superMarket = new SuperMarket();
+        assertThat(superMarket.checkout("HHHHH"), equalTo(45));
+    }
+
+    @Test
+    public void specialOffer10H() throws Exception {
+        final SuperMarket superMarket = new SuperMarket();
+        assertThat(superMarket.checkout("HHHHHHHHHH"), equalTo(80));
     }
 
     @Test
@@ -95,11 +137,35 @@ public class SuperMarketTest {
         assertThat(superMarket.checkout("FF"), equalTo(20));
     }
 
+
     @Test
-    public void specialOffer3F() throws Exception {
+    public void specialOffer2K() throws Exception {
         final SuperMarket superMarket = new SuperMarket();
-        assertThat(superMarket.checkout("FFF"), equalTo(20));
+        assertThat(superMarket.checkout("KK"), equalTo(150));
     }
 
+    @Test
+    public void specialOffer2V() throws Exception {
+        final SuperMarket superMarket = new SuperMarket();
+        assertThat(superMarket.checkout("VV"), equalTo(90));
+    }
+
+    @Test
+    public void specialOffer3V() throws Exception {
+        final SuperMarket superMarket = new SuperMarket();
+        assertThat(superMarket.checkout("VVV"), equalTo(130));
+    }
+
+    @Test
+    public void specialOffer2P() throws Exception {
+        final SuperMarket superMarket = new SuperMarket();
+        assertThat(superMarket.checkout("PPPPP"), equalTo(200));
+    }
+
+    @Test
+    public void specialOffer2Q() throws Exception {
+        final SuperMarket superMarket = new SuperMarket();
+        assertThat(superMarket.checkout("QQQ"), equalTo(80));
+    }
 
 }
