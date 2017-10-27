@@ -11,7 +11,7 @@ public class SpecialOfferK implements SpecialOfferResolver{
         int totalPrice = 0;
         while(productCount >= 2){
             productCount -= 2;
-            totalPrice +=  150;
+            totalPrice +=  120;
         }
 
         productsCount.put('K', productCount);

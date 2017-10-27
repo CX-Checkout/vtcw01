@@ -141,7 +141,7 @@ public class SuperMarketTest {
     @Test
     public void specialOffer2K() throws Exception {
         final SuperMarket superMarket = new SuperMarket();
-        assertThat(superMarket.checkout("KK"), equalTo(150));
+        assertThat(superMarket.checkout("KK"), equalTo(120));
     }
 
     @Test
@@ -166,6 +166,18 @@ public class SuperMarketTest {
     public void specialOffer2Q() throws Exception {
         final SuperMarket superMarket = new SuperMarket();
         assertThat(superMarket.checkout("QQQ"), equalTo(80));
+    }
+
+    @Test
+    public void specialOfferSTXYZ2() throws Exception {
+        final SuperMarket superMarket = new SuperMarket();
+        assertThat(superMarket.checkout("SSSZ"), equalTo(65));
+    }
+
+    @Test
+    public void specialOfferSTXZ() throws Exception {
+        final SuperMarket superMarket = new SuperMarket();
+        assertThat(superMarket.checkout("STXZ"), equalTo(62));
     }
 
 }

@@ -30,39 +30,42 @@ public class SuperMarket {
         specialOfferResolvers.add(new SpecialOfferK());
         specialOfferResolvers.add(new SpecialOfferP());
         specialOfferResolvers.add(new SpecialOfferQ());
+        specialOfferResolvers.add(new SpecialOfferSTXYZ(standardPrice));
 
 
     }
 
-            /*| Item | Price | Special offers         |
-            +------+-------+------------------------+
-            | A    | 50    | 3A for 130, 5A for 200 | ok
-            | B    | 30    | 2B for 45              | ok
-            | C    | 20    |                        | ok
-            | D    | 15    |                        | ok
-            | E    | 40    | 2E get one B free      | ok
-            | F    | 10    | 2F get one F free      | ok
-            | G    | 20    |                        | ok
-            | H    | 10    | 5H for 45, 10H for 80  | ok
-            | I    | 35    |                        | ok
-            | J    | 60    |                        | ok
-            | K    | 80    | 2K for 150             | ok
-            | L    | 90    |                        | ok
-            | M    | 15    |                        | ok
-            | N    | 40    | 3N get one M free      | ok
-            | O    | 10    |                        | ok
-            | P    | 50    | 5P for 200             | ok
-            | Q    | 30    | 3Q for 80              | ok
-            | R    | 50    | 3R get one Q free      | ok
-            | S    | 30    |                        | ok
-            | T    | 20    |                        | ok
-            | U    | 40    | 3U get one U free      | ok
-            | V    | 50    | 2V for 90, 3V for 130  | ok
-            | W    | 20    |                        | ok
-            | X    | 90    |                        | ok
-            | Y    | 10    |                        | ok
-            | Z    | 50    |                        | ok
-            +------+-------+------------------------+*/
+/*+------+-------+---------------------------------+
+| Item | Price | Special offers                  |
++------+-------+---------------------------------+
+| A    | 50    | 3A for 130, 5A for 200          | ok
+| B    | 30    | 2B for 45                       | ok
+| C    | 20    |                                 | ok
+| D    | 15    |                                 | ok
+| E    | 40    | 2E get one B free               | ok
+| F    | 10    | 2F get one F free               | ok
+| G    | 20    |                                 | ok
+| H    | 10    | 5H for 45, 10H for 80           | ok
+| I    | 35    |                                 | ok
+| J    | 60    |                                 | ok
+| K    | 70    | 2K for 120                      | ok
+| L    | 90    |                                 | ok
+| M    | 15    |                                 | ok
+| N    | 40    | 3N get one M free               | ok
+| O    | 10    |                                 | ok
+| P    | 50    | 5P for 200                      | ok
+| Q    | 30    | 3Q for 80                       | ok
+| R    | 50    | 3R get one Q free               |
+| S    | 20    | buy any 3 of (S,T,X,Y,Z) for 45 |
+| T    | 20    | buy any 3 of (S,T,X,Y,Z) for 45 |
+| U    | 40    | 3U get one U free               |
+| V    | 50    | 2V for 90, 3V for 130           |
+| W    | 20    |                                 |
+| X    | 17    | buy any 3 of (S,T,X,Y,Z) for 45 |
+| Y    | 20    | buy any 3 of (S,T,X,Y,Z) for 45 |
+| Z    | 21    | buy any 3 of (S,T,X,Y,Z) for 45 |
++------+-------+---------------------------------+
+*/
 
     private Map<Character, Integer> initPriceTable(){
 
@@ -79,7 +82,7 @@ public class SuperMarket {
         standardPrice.put('H', 10);
         standardPrice.put('I', 35);
         standardPrice.put('J', 60);
-        standardPrice.put('K', 80);
+        standardPrice.put('K', 70);
         standardPrice.put('L', 90);
         standardPrice.put('M', 15);
         standardPrice.put('N', 40);
@@ -87,14 +90,14 @@ public class SuperMarket {
         standardPrice.put('P', 50);
         standardPrice.put('Q', 30);
         standardPrice.put('R', 50);
-        standardPrice.put('S', 30);
+        standardPrice.put('S', 20);
         standardPrice.put('T', 20);
         standardPrice.put('U', 40);
         standardPrice.put('V', 50);
         standardPrice.put('W', 20);
-        standardPrice.put('X', 90);
-        standardPrice.put('Y', 10);
-        standardPrice.put('Z', 50);
+        standardPrice.put('X', 17);
+        standardPrice.put('Y', 20);
+        standardPrice.put('Z', 21);
 
         return standardPrice;
     }
