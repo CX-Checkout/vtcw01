@@ -89,5 +89,17 @@ public class SuperMarketTest {
         assertThat(superMarket.checkout("AAAAA"), equalTo(200));
     }
 
+    @Test
+    public void specialOffer2F() throws Exception {
+        final SuperMarket superMarket = new SuperMarket();
+        assertThat(superMarket.checkout("FF"), equalTo(20));
+    }
+
+    @Test
+    public void specialOffer3F() throws Exception {
+        final SuperMarket superMarket = new SuperMarket();
+        assertThat(superMarket.checkout("FFF"), equalTo(20));
+    }
+
 
 }

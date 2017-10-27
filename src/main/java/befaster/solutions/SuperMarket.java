@@ -18,12 +18,14 @@ public class SuperMarket {
         standardPrice.put('C', 20);
         standardPrice.put('D', 15);
         standardPrice.put('E', 40);
+        standardPrice.put('F', 10);
 
         specialOfferResolvers = new ArrayList<>();
 
         specialOfferResolvers.add(new SpecialOfferE());
         specialOfferResolvers.add(new SpecialOfferA());
         specialOfferResolvers.add(new SpecialOfferB());
+        specialOfferResolvers.add(new SpecialOfferF());
 
     }
 
